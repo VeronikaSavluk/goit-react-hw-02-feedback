@@ -7,18 +7,15 @@ export const Options = styled.div`
     aling-item: center;
     `;
 
-// export const Option = styled.li`
-// column-gap: 15px;
-// `;
 export const Btn = styled.button`
-    display: block;font-size: 1em;
-    margin: 0;
+    display: block;
+    width: 65px;
+    font-size: 10px;
+    margin-left: 10px;
     padding: 4px;
+    text-transform: capitalize;
     border: 1px solid #6495ED;
     border-radius: 5px;
     background: #6495ED;
     color: white;
 `;
-
-    // background: ${ props => props.primary ? "#6495ED" : "white" };
-    // color: ${props => props.primary ? "white" : "#6495ED"};

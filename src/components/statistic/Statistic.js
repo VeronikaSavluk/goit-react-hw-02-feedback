@@ -1,11 +1,12 @@
 import PropTypes from 'prop-types';
+import Notification from './../notification/Notification';
 
 import { Options, Option } from './Statistic.styled';
 
 const Statistic = ({ good, neutral, bad, total, positivePercentage }) => {
   if (total === 0) {
     return (
-      <Option>No feedback given</Option>
+      <Notification message="There is no feedback"></Notification>
     )
   } else {
     return (

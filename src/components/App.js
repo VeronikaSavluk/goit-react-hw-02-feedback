@@ -47,7 +47,7 @@ class App extends Component {
     return (
       <div>
           <Section title="Please leave feedback">
-          <FeedbackOptions options={{ good, neutral, bad }}
+          <FeedbackOptions options={Object.keys(this.state)}
             onLeaveFeedback={this.onLeaveFeedback} />
           </Section>
           <Section title="Statistics">

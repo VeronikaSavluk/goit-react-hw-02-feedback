@@ -1,8 +1,9 @@
-import React, { Component } from "react";
+import React, { Component } from 'react';
 
-import Section from "./section/Section";
-import FeedbackOptions from './feedbackoptions/FeedbackOptions';
-import Statistic from './statistic/Statistic';
+import Section from './section';
+import FeedbackOptions from './feedbackoptions';
+import Notification from './notification';
+import Statistic from './statistic';
 
 class App extends Component {
 
@@ -51,9 +52,13 @@ class App extends Component {
             onLeaveFeedback={this.onLeaveFeedback} />
           </Section>
           <Section title="Statistics">
-          <Statistic good={good} neutral={neutral} bad={bad}
-            total={total} positivePercentage={positivePercentage}
+          {total === 0 ? (
+            <Notification message="There is no feedback"></Notification>
+          ) : (
+            <Statistic good={good} neutral={neutral} bad={bad}
+              total={total} positivePercentage={positivePercentage}
             />
+          )}
         </Section>
       </div>
     );
